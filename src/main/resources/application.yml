@@ -1,0 +1,16 @@
+
+server:
+  port: 8889
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/scc
+    username: mysql
+    password: mysql
+  cloud:
+    config:
+      server:
+        jdbc:
+          enabled: true
+          sql: 'SELECT k, v FROM t WHERE a = ? AND p = ? AND l = ?'
+          order: 1
